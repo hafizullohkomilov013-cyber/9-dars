@@ -1,15 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 let initialState = {
-  value: 0,
+  data: 0,
 };
 
 export const counterSlice = createSlice  ({
     name : "counter",
     initialState,
     reducers:{
-        increment: () => {},
-        decrement: () => {},
+        increment: (state) => {
+            state.value += 1
+        },
+        decrement: (state) => {
+            state.value -= 1
+        },
     }
 })
 
